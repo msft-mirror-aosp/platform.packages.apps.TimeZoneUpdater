@@ -12,7 +12,13 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+package {
+    // See: http://go/android-license-faq
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
 // A static library containing all the source needed by the TimeZoneUpdater
+
 java_library {
     name: "time_zone_updater",
     srcs: [
@@ -29,7 +35,6 @@ android_app {
     },
     static_libs: ["time_zone_updater"],
     platform_apis: true,
-    certificate: "platform",
     privileged: true,
     required: ["com.android.timezone.updater.xml"],
 }
